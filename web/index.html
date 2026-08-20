@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Resource Manager</title>
+  <link rel="stylesheet" href="/styles.css" />
+</head>
+<body>
+  <header>
+    <h1>Resource Manager</h1>
+    <p class="sub">Meeting rooms, gym equipment and workstations</p>
+  </header>
+
+  <main>
+    <section class="box">
+      <div class="box-head">
+        <h2>Resources</h2>
+        <button type="button" id="toggle-add">Add resource</button>
+      </div>
+
+      <form id="add-form" class="hidden">
+        <div class="row3">
+          <label>Name
+            <input name="name" required maxlength="60" placeholder="Room 3" />
+          </label>
+          <label>Type
+            <select name="type" required>
+              <option value="MEETING_ROOM">Meeting Room</option>
+              <option value="GYM_EQUIPMENT">Gym Equipment</option>
+              <option value="WORKSTATION">Paid Workstation</option>
+            </select>
+          </label>
+          <label>Capacity
+            <input name="capacity" type="number" min="1" max="100" value="1" required />
+          </label>
+        </div>
+
+        <p class="note">Services  first hour and extra hour.</p>
+        <div id="service-rows"></div>
+        <button type="button" id="add-service-row">+ another service</button>
+        <button type="submit">Save</button>
+      </form>
+
+      <div id="resource-list"></div>
+    </section>
+
+    <div class="two-col">
+      <section class="box">
+        <h2>Active</h2>
+        <div id="active-list"></div>
+      </section>
+      <section class="box">
+        <h2>Bills</h2>
+        <div id="bill-list"></div>
+      </section>
+    </div>
+  </main>
+
+  <div id="toast" class="toast"></div>
+
+  <dialog id="start-dialog">
+    <form id="start-form">
+      <h3>Start usage</h3>
+      <p id="start-resource-label"></p>
+      <label>Service
+        <select id="start-service" required></select>
+      </label>
+      <label>Your name
+        <input id="start-user" required maxlength="40" placeholder="Yana" />
+      </label>
+      <input type="hidden" id="start-resource-id" />
+      <div class="btns">
+        <button type="button" id="start-cancel">Cancel</button>
+        <button type="submit">Start</button>
+      </div>
+    </form>
+  </dialog>
+
+  <script src="/app.js"></script>
+</body>
+</html>
