@@ -1,12 +1,28 @@
 # Resource Manager
 
 Java assignment for shared resources (rooms, gym, desks) with capacity limits and hourly billing in INR.
+# Tech stack
+Language
+Java (plain JDK)
+HTTP server
+com.sun.net.httpserver.HttpServer (built into the JDK)
+API
+Custom REST JSON endpoints
+JSON
+Hand-rolled parser/encoder (Json.java) 
+Storage
+In-memory (ConcurrentHashMap) 
+Frontend
+HTML + CSS + vanilla JavaScript (web/)
+Build/run
+javac / java only
 
 
 
 ## Data structures
+Build using java
 
-All data lives in memory in `InMemoryStore` (lost on restart). No database tables.
+All data lives in memory in `InMemoryStore` . No database tables.
 
 ### Core storage: `ConcurrentHashMap`
 
