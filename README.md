@@ -2,7 +2,7 @@
 
 Java assignment for shared resources (rooms, gym, desks) with capacity limits and hourly billing in INR.
 
-No frameworks, no extra libraries, no database.
+
 
 ## Run
 
@@ -13,7 +13,7 @@ java -cp out com.resourcehub.Main
 
 Open http://localhost:8080/
 
-If 8080 is busy: `java -cp out com.resourcehub.Main 9090`
+
 
 ## Pricing
 
